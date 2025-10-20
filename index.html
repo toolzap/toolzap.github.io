@@ -23,6 +23,17 @@
     <title>🧰 Developer Toolbox</title>
     <link rel="icon" href="devkit.png" />
     <style>
+      @font-face {
+        font-family: "CustomFont";
+        src: url("bold.ttf") format("truetype");
+      }
+
+      * {
+        font-family: "CustomFont", -apple-system, BlinkMacSystemFont,
+          "SF Pro Display", "SF Pro Text", "Helvetica Neue", system-ui,
+          sans-serif;
+      }
+
       /* Image enhancement styles */
       .image-slider {
         width: 100%;
@@ -159,8 +170,9 @@
       }
 
       body {
-        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
-          "SF Pro Text", "Helvetica Neue", system-ui, sans-serif;
+        font-family: "CustomFont", -apple-system, BlinkMacSystemFont,
+          "SF Pro Display", "SF Pro Text", "Helvetica Neue", system-ui,
+          sans-serif;
         background: #000000;
         min-height: 100vh;
         color: var(--text-primary);
@@ -242,8 +254,8 @@
         font-weight: 700;
         line-height: 1.2;
         letter-spacing: -0.02em;
-        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
-          system-ui, sans-serif;
+        font-family: "CustomFont", -apple-system, BlinkMacSystemFont,
+          "SF Pro Display", system-ui, sans-serif;
       }
 
       @media (min-width: 768px) {
@@ -909,8 +921,8 @@
         font-weight: 700;
         display: block;
         line-height: 1.2;
-        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
-          system-ui, sans-serif;
+        font-family: "CustomFont", -apple-system, BlinkMacSystemFont,
+          "SF Pro Display", system-ui, sans-serif;
       }
 
       .metric-label {
@@ -1074,8 +1086,8 @@
         display: block;
         margin-bottom: 5px;
         line-height: 1.2;
-        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
-          system-ui, sans-serif;
+        font-family: "CustomFont", -apple-system, BlinkMacSystemFont,
+          "SF Pro Display", system-ui, sans-serif;
       }
 
       .stat-label {
@@ -1230,8 +1242,8 @@
       h5,
       h6 {
         color: var(--text-primary);
-        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
-          system-ui, sans-serif;
+        font-family: "CustomFont", -apple-system, BlinkMacSystemFont,
+          "SF Pro Display", system-ui, sans-serif;
         font-weight: 600;
         letter-spacing: -0.01em;
       }
