@@ -2740,14 +2740,29 @@
                 </div>
               </div>
               <canvas id="resize-canvas" style="display: none"></canvas>
-              <button
-                id="download-resize"
-                style="display: none"
-                onclick="downloadImage('resize-canvas', 'resized.png')"
-                class="download-button"
+              <div
+                style="
+                  display: flex;
+                  gap: 10px;
+                  align-items: center;
+                  margin-top: 15px;
+                "
               >
-                ⬇️ Download
-              </button>
+                <input
+                  type="text"
+                  id="resize-filename"
+                  placeholder="Enter filename (e.g. image.png)"
+                  style="flex: 1"
+                />
+                <button
+                  id="download-resize"
+                  style="display: none"
+                  onclick="downloadImage('resize-canvas', document.getElementById('resize-filename').value || 'resized.png')"
+                  class="download-button"
+                >
+                  ⬇️ Download
+                </button>
+              </div>
             </div>
             <div class="tab-content" id="enhance">
               <div class="compact-controls">
@@ -2997,27 +3012,49 @@
                           <span>Apply</span>
                         </button>
                       </div>
-                      <button
-                        id="download-enhanced"
+                      <div
                         style="
-                          display: none;
-                          background: rgba(255, 255, 255, 0.1);
-                          color: #fff;
-                          border: none;
-                          padding: 12px 24px;
-                          border-radius: 25px;
-                          cursor: pointer;
-                          font-size: 16px;
                           display: flex;
-                          align-items: center;
                           gap: 10px;
-                          margin: 0 auto;
+                          align-items: center;
+                          margin: 15px 0;
+                          padding: 0 20px;
                         "
-                        onclick="downloadImage('enhance-canvas', 'enhanced.png')"
                       >
-                        <span style="font-size: 20px">⬇️</span>
-                        <span>Download Enhanced Image</span>
-                      </button>
+                        <input
+                          type="text"
+                          id="enhance-filename"
+                          placeholder="Enter filename (e.g. image.png)"
+                          style="
+                            flex: 1;
+                            background: rgba(255, 255, 255, 0.1);
+                            color: #fff;
+                            border: none;
+                            padding: 12px;
+                            border-radius: 12px;
+                          "
+                        />
+                        <button
+                          id="download-enhanced"
+                          style="
+                            display: none;
+                            background: rgba(255, 255, 255, 0.1);
+                            color: #fff;
+                            border: none;
+                            padding: 12px 24px;
+                            border-radius: 25px;
+                            cursor: pointer;
+                            font-size: 16px;
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                          "
+                          onclick="downloadImage('enhance-canvas', document.getElementById('enhance-filename').value || 'enhanced.png')"
+                        >
+                          <span style="font-size: 20px">⬇️</span>
+                          <span>Download</span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -3058,14 +3095,29 @@
                 </div>
               </div>
               <canvas id="crop-canvas" style="display: none"></canvas>
-              <button
-                id="download-crop"
-                style="display: none"
-                onclick="downloadImage('crop-canvas', 'cropped.png')"
-                class="download-button"
+              <div
+                style="
+                  display: flex;
+                  gap: 10px;
+                  align-items: center;
+                  margin-top: 15px;
+                "
               >
-                ⬇️ Download
-              </button>
+                <input
+                  type="text"
+                  id="crop-filename"
+                  placeholder="Enter filename (e.g. image.png)"
+                  style="flex: 1"
+                />
+                <button
+                  id="download-crop"
+                  style="display: none"
+                  onclick="downloadImage('crop-canvas', document.getElementById('crop-filename').value || 'cropped.png')"
+                  class="download-button"
+                >
+                  ⬇️ Download
+                </button>
+              </div>
             </div>
           </div>
 
