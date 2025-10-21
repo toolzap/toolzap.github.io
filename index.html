@@ -19,7 +19,10 @@
     <meta name="theme-color" content="#0A84FF" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="apple-mobile-web-app-title" content="Dev Toolbox" />
+    <meta name="apple-mobile-web-app-title" content="Toolzap" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="icons/icon-152x152.png" />
+    <link rel="apple-touch-startup-image" href="icons/icon-512x512.png" />
 
     <!-- OpenGraph Meta Tags -->
     <meta
@@ -7757,6 +7760,23 @@ Hello World! This is a Test.</textarea
         .addEventListener("input", function () {
           document.getElementById("contrast-val").textContent = this.value;
         });
+    </script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then(function (registration) {
+              console.log(
+                "ServiceWorker registration successful with scope: ",
+                registration.scope
+              );
+            })
+            .catch(function (err) {
+              console.log("ServiceWorker registration failed: ", err);
+            });
+        });
+      }
     </script>
   </body>
 </html>
